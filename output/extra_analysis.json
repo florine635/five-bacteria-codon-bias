@@ -1,0 +1,643 @@
+{
+  "residual": {
+    "n_genes": 14041,
+    "below_curve_pct": 95.42,
+    "residual_median": -6.87,
+    "residual_min": -33.06,
+    "residual_max": 14.04,
+    "per_species": {
+      "B. subtilis": {
+        "residual_median": -5.29,
+        "below_curve_pct": 90.3,
+        "n": 2589
+      },
+      "E. coli": {
+        "residual_median": -11.86,
+        "below_curve_pct": 97.1,
+        "n": 3313
+      },
+      "M. tuberculosis": {
+        "residual_median": -4.32,
+        "below_curve_pct": 90.9,
+        "n": 2196
+      },
+      "P. aeruginosa": {
+        "residual_median": -7.44,
+        "below_curve_pct": 98.6,
+        "n": 4654
+      },
+      "T. thermophilus": {
+        "residual_median": -5.4,
+        "below_curve_pct": 97.3,
+        "n": 1289
+      }
+    },
+    "strongest_selection": [
+      {
+        "organism": "E. coli",
+        "gene": "eno",
+        "n_codons": 432,
+        "gc3s": 0.4976,
+        "enc": 27.43,
+        "residual": -33.06
+      },
+      {
+        "organism": "E. coli",
+        "gene": "gapA",
+        "n_codons": 331,
+        "gc3s": 0.5094,
+        "enc": 27.92,
+        "residual": -32.57
+      },
+      {
+        "organism": "E. coli",
+        "gene": "groL",
+        "n_codons": 548,
+        "gc3s": 0.4971,
+        "enc": 28.39,
+        "residual": -32.1
+      },
+      {
+        "organism": "E. coli",
+        "gene": "rpsI",
+        "n_codons": 130,
+        "gc3s": 0.4762,
+        "enc": 28.85,
+        "residual": -31.49
+      },
+      {
+        "organism": "E. coli",
+        "gene": "rpsA",
+        "n_codons": 557,
+        "gc3s": 0.5129,
+        "enc": 29.29,
+        "residual": -31.19
+      }
+    ],
+    "closest_to_curve": [
+      {
+        "organism": "B. subtilis",
+        "gene": "lrpA",
+        "n_codons": 136,
+        "gc3s": 0.209,
+        "enc": 59.57,
+        "residual": 14.04
+      },
+      {
+        "organism": "B. subtilis",
+        "gene": "yokL",
+        "n_codons": 177,
+        "gc3s": 0.2156,
+        "enc": 58.09,
+        "residual": 12.05
+      },
+      {
+        "organism": "P. aeruginosa",
+        "gene": NaN,
+        "n_codons": 104,
+        "gc3s": 0.8763,
+        "enc": 51.52,
+        "residual": 11.61
+      },
+      {
+        "organism": "P. aeruginosa",
+        "gene": NaN,
+        "n_codons": 117,
+        "gc3s": 0.7913,
+        "enc": 57.21,
+        "residual": 11.12
+      },
+      {
+        "organism": "E. coli",
+        "gene": "ygeG",
+        "n_codons": 163,
+        "gc3s": 0.2642,
+        "enc": 60.83,
+        "residual": 11.12
+      }
+    ]
+  },
+  "heg": {
+    "heg_list": [
+      "rpsA",
+      "rpsB",
+      "rpsC",
+      "rpsI",
+      "rplA",
+      "tufA",
+      "tufB",
+      "fusA",
+      "infB",
+      "gapA",
+      "gapB",
+      "pgk",
+      "eno",
+      "atpD",
+      "groL",
+      "rpoB"
+    ],
+    "per_species": {
+      "B. subtilis": {
+        "n_heg": 10,
+        "enc_all": 52.54,
+        "enc_heg": 39.03,
+        "enc_gap": 13.5,
+        "gc3s_all": 0.4199,
+        "gc3s_heg": 0.3441
+      },
+      "E. coli": {
+        "n_heg": 15,
+        "enc_all": 47.16,
+        "enc_heg": 31.06,
+        "enc_gap": 16.1,
+        "gc3s_all": 0.536,
+        "gc3s_heg": 0.5184
+      },
+      "M. tuberculosis": {
+        "n_heg": 6,
+        "enc_all": 42.35,
+        "enc_heg": 37.15,
+        "enc_gap": 5.2,
+        "gc3s_all": 0.7869,
+        "gc3s_heg": 0.8267
+      },
+      "P. aeruginosa": {
+        "n_heg": 12,
+        "enc_all": 32.91,
+        "enc_heg": 30.54,
+        "enc_gap": 2.37,
+        "gc3s_all": 0.8715,
+        "gc3s_heg": 0.8054
+      },
+      "T. thermophilus": {
+        "n_heg": 10,
+        "enc_all": 31.63,
+        "enc_heg": 29.3,
+        "enc_gap": 2.32,
+        "gc3s_all": 0.9216,
+        "gc3s_heg": 0.9515
+      }
+    },
+    "ecoli_codon_shift": {
+      "n_heg": 15,
+      "up": [
+        [
+          "CTG",
+          5.39,
+          3.0,
+          2.39
+        ],
+        [
+          "CGT",
+          4.33,
+          2.31,
+          2.03
+        ],
+        [
+          "TCT",
+          2.63,
+          0.88,
+          1.74
+        ],
+        [
+          "ATC",
+          2.59,
+          1.25,
+          1.34
+        ],
+        [
+          "CCG",
+          3.35,
+          2.05,
+          1.3
+        ]
+      ],
+      "down": [
+        [
+          "CAT",
+          0.25,
+          1.13,
+          -0.87
+        ],
+        [
+          "TAT",
+          0.27,
+          1.15,
+          -0.88
+        ],
+        [
+          "GTG",
+          0.55,
+          1.45,
+          -0.9
+        ],
+        [
+          "ACG",
+          0.12,
+          1.08,
+          -0.96
+        ],
+        [
+          "ATT",
+          0.41,
+          1.54,
+          -1.13
+        ]
+      ]
+    }
+  },
+  "arginine_rscu": {
+    "B. subtilis": {
+      "CGT": 1.1,
+      "CGC": 1.23,
+      "CGA": 0.57,
+      "CGG": 0.89,
+      "AGA": 1.65,
+      "AGG": 0.54
+    },
+    "E. coli": {
+      "CGT": 2.31,
+      "CGC": 2.4,
+      "CGA": 0.38,
+      "CGG": 0.55,
+      "AGA": 0.24,
+      "AGG": 0.12
+    },
+    "M. tuberculosis": {
+      "CGT": 0.7,
+      "CGC": 2.3,
+      "CGA": 0.6,
+      "CGG": 1.98,
+      "AGA": 0.12,
+      "AGG": 0.3
+    },
+    "P. aeruginosa": {
+      "CGT": 0.66,
+      "CGC": 3.9,
+      "CGA": 0.18,
+      "CGG": 1.05,
+      "AGA": 0.04,
+      "AGG": 0.17
+    },
+    "T. thermophilus": {
+      "CGT": 0.11,
+      "CGC": 2.1,
+      "CGA": 0.07,
+      "CGG": 2.57,
+      "AGA": 0.05,
+      "AGG": 1.1
+    }
+  },
+  "cluster_crosstab": {
+    "engine_note": "簇编号依赖 K-means 实现，以本次输出为准",
+    "table_pct": {
+      "B. subtilis": {
+        "C0": 0.1,
+        "C1": 98.3,
+        "C2": 1.6,
+        "C3": 0.0,
+        "C4": 0.0
+      },
+      "E. coli": {
+        "C0": 0.7,
+        "C1": 13.3,
+        "C2": 85.7,
+        "C3": 0.3,
+        "C4": 0.0
+      },
+      "M. tuberculosis": {
+        "C0": 94.3,
+        "C1": 0.8,
+        "C2": 0.6,
+        "C3": 4.2,
+        "C4": 0.1
+      },
+      "P. aeruginosa": {
+        "C0": 10.2,
+        "C1": 0.6,
+        "C2": 0.6,
+        "C3": 88.5,
+        "C4": 0.0
+      },
+      "T. thermophilus": {
+        "C0": 1.3,
+        "C1": 0.3,
+        "C2": 0.0,
+        "C3": 0.2,
+        "C4": 98.2
+      }
+    },
+    "dominant": {
+      "B. subtilis": {
+        "cluster": "C1",
+        "pct": 98.3,
+        "top_other": {
+          "cluster": "C2",
+          "pct": 1.6
+        }
+      },
+      "E. coli": {
+        "cluster": "C2",
+        "pct": 85.7,
+        "top_other": {
+          "cluster": "C1",
+          "pct": 13.3
+        }
+      },
+      "M. tuberculosis": {
+        "cluster": "C0",
+        "pct": 94.3,
+        "top_other": {
+          "cluster": "C3",
+          "pct": 4.2
+        }
+      },
+      "P. aeruginosa": {
+        "cluster": "C3",
+        "pct": 88.5,
+        "top_other": {
+          "cluster": "C0",
+          "pct": 10.2
+        }
+      },
+      "T. thermophilus": {
+        "cluster": "C4",
+        "pct": 98.2,
+        "top_other": {
+          "cluster": "C0",
+          "pct": 1.3
+        }
+      }
+    }
+  },
+  "gc_dispersion": {
+    "per_species": {
+      "B. subtilis": {
+        "mean": 0.4199,
+        "std": 0.0764,
+        "cv": 0.1819,
+        "iqr": 0.091
+      },
+      "E. coli": {
+        "mean": 0.536,
+        "std": 0.082,
+        "cv": 0.153,
+        "iqr": 0.0931
+      },
+      "M. tuberculosis": {
+        "mean": 0.7869,
+        "std": 0.055,
+        "cv": 0.0698,
+        "iqr": 0.0625
+      },
+      "P. aeruginosa": {
+        "mean": 0.8715,
+        "std": 0.0628,
+        "cv": 0.0721,
+        "iqr": 0.0547
+      },
+      "T. thermophilus": {
+        "mean": 0.9216,
+        "std": 0.0442,
+        "cv": 0.0479,
+        "iqr": 0.0336
+      }
+    },
+    "cds_gc_pct": {
+      "B. subtilis": 44.22,
+      "E. coli": 51.9,
+      "M. tuberculosis": 65.91,
+      "P. aeruginosa": 67.16,
+      "T. thermophilus": 69.67
+    },
+    "gc3s_minus_gc": {
+      "B. subtilis": -2.23,
+      "E. coli": 1.7,
+      "M. tuberculosis": 12.78,
+      "P. aeruginosa": 19.99,
+      "T. thermophilus": 22.49
+    },
+    "corr_mean_std": -0.8749,
+    "corr_mean_cv": -0.9884,
+    "corr_gc_skew": 0.9677
+  },
+  "corr_robustness": {
+    "per_species": {
+      "B. subtilis": {
+        "r": 0.318,
+        "n": 2589
+      },
+      "E. coli": {
+        "r": -0.4438,
+        "n": 3313
+      },
+      "M. tuberculosis": {
+        "r": -0.8115,
+        "n": 2196
+      },
+      "P. aeruginosa": {
+        "r": -0.8109,
+        "n": 4654
+      },
+      "T. thermophilus": {
+        "r": -0.8102,
+        "n": 1289
+      }
+    },
+    "bsubis": {
+      "r_all": 0.318,
+      "r_gc3s_len": 0.1355,
+      "after_min_len": {
+        ">=150": {
+          "n": 2287,
+          "r": 0.2924
+        },
+        ">=200": {
+          "n": 1961,
+          "r": 0.2758
+        },
+        ">=250": {
+          "n": 1651,
+          "r": 0.3095
+        },
+        ">=300": {
+          "n": 1277,
+          "r": 0.3231
+        }
+      }
+    }
+  },
+  "misassignment": {
+    "dominant_cluster": {
+      "B. subtilis": 1,
+      "E. coli": 2,
+      "M. tuberculosis": 0,
+      "P. aeruginosa": 3,
+      "T. thermophilus": 4
+    },
+    "per_species": {
+      "B. subtilis": {
+        "n": 2589,
+        "n_misassigned": 45,
+        "gc3s_correct": 0.4179,
+        "gc3s_misassigned": 0.5357,
+        "enc_correct": 52.59,
+        "enc_misassigned": 49.8,
+        "assigned_to": {
+          "C2": {
+            "n": 42,
+            "owner_species": "E. coli",
+            "owner_gc3s": 0.536,
+            "dist_to_owner": 0.0045,
+            "dist_to_self": 0.1116
+          },
+          "C0": {
+            "n": 3,
+            "owner_species": "M. tuberculosis",
+            "owner_gc3s": 0.7869,
+            "dist_to_owner": 0.1935,
+            "dist_to_self": 0.1735
+          }
+        }
+      },
+      "E. coli": {
+        "n": 3313,
+        "n_misassigned": 474,
+        "gc3s_correct": 0.5545,
+        "gc3s_misassigned": 0.4252,
+        "enc_correct": 46.24,
+        "enc_misassigned": 52.64,
+        "assigned_to": {
+          "C1": {
+            "n": 442,
+            "owner_species": "B. subtilis",
+            "owner_gc3s": 0.4199,
+            "dist_to_owner": 0.0164,
+            "dist_to_self": 0.1325
+          },
+          "C0": {
+            "n": 23,
+            "owner_species": "M. tuberculosis",
+            "owner_gc3s": 0.7869,
+            "dist_to_owner": 0.0857,
+            "dist_to_self": 0.1652
+          },
+          "C3": {
+            "n": 9,
+            "owner_species": "P. aeruginosa",
+            "owner_gc3s": 0.8715,
+            "dist_to_owner": 0.0874,
+            "dist_to_self": 0.2481
+          }
+        }
+      },
+      "M. tuberculosis": {
+        "n": 2196,
+        "n_misassigned": 125,
+        "gc3s_correct": 0.7867,
+        "gc3s_misassigned": 0.7902,
+        "enc_correct": 42.5,
+        "enc_misassigned": 39.93,
+        "assigned_to": {
+          "C3": {
+            "n": 92,
+            "owner_species": "P. aeruginosa",
+            "owner_gc3s": 0.8715,
+            "dist_to_owner": 0.019,
+            "dist_to_self": 0.0655
+          },
+          "C1": {
+            "n": 18,
+            "owner_species": "B. subtilis",
+            "owner_gc3s": 0.4199,
+            "dist_to_owner": 0.1543,
+            "dist_to_self": 0.2127
+          },
+          "C2": {
+            "n": 13,
+            "owner_species": "E. coli",
+            "owner_gc3s": 0.536,
+            "dist_to_owner": 0.1017,
+            "dist_to_self": 0.1492
+          },
+          "C4": {
+            "n": 2,
+            "owner_species": "T. thermophilus",
+            "owner_gc3s": 0.9216,
+            "dist_to_owner": 0.0566,
+            "dist_to_self": 0.0781
+          }
+        }
+      },
+      "P. aeruginosa": {
+        "n": 4654,
+        "n_misassigned": 537,
+        "gc3s_correct": 0.885,
+        "gc3s_misassigned": 0.7674,
+        "enc_correct": 31.7,
+        "enc_misassigned": 42.2,
+        "assigned_to": {
+          "C0": {
+            "n": 477,
+            "owner_species": "M. tuberculosis",
+            "owner_gc3s": 0.7869,
+            "dist_to_owner": 0.0099,
+            "dist_to_self": 0.0746
+          },
+          "C1": {
+            "n": 30,
+            "owner_species": "B. subtilis",
+            "owner_gc3s": 0.4199,
+            "dist_to_owner": 0.0405,
+            "dist_to_self": 0.4111
+          },
+          "C2": {
+            "n": 29,
+            "owner_species": "E. coli",
+            "owner_gc3s": 0.536,
+            "dist_to_owner": 0.0596,
+            "dist_to_self": 0.2759
+          },
+          "C4": {
+            "n": 1,
+            "owner_species": "T. thermophilus",
+            "owner_gc3s": 0.9216,
+            "dist_to_owner": 0.0073,
+            "dist_to_self": 0.0428
+          }
+        }
+      },
+      "T. thermophilus": {
+        "n": 1289,
+        "n_misassigned": 23,
+        "gc3s_correct": 0.9251,
+        "gc3s_misassigned": 0.73,
+        "enc_correct": 31.37,
+        "enc_misassigned": 46.02,
+        "assigned_to": {
+          "C0": {
+            "n": 17,
+            "owner_species": "M. tuberculosis",
+            "owner_gc3s": 0.7869,
+            "dist_to_owner": 0.0405,
+            "dist_to_self": 0.1752
+          },
+          "C1": {
+            "n": 4,
+            "owner_species": "B. subtilis",
+            "owner_gc3s": 0.4199,
+            "dist_to_owner": 0.1513,
+            "dist_to_self": 0.3504
+          },
+          "C3": {
+            "n": 2,
+            "owner_species": "P. aeruginosa",
+            "owner_gc3s": 0.8715,
+            "dist_to_owner": 0.0375,
+            "dist_to_self": 0.0126
+          }
+        }
+      }
+    }
+  }
+}

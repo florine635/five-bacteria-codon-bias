@@ -1,0 +1,6 @@
+﻿organism,total_records,kept,kept_pct,drop_too_short,drop_not_atg_start,drop_enc_out_of_range,drop_no_stop,drop_internal_stop,drop_not_multiple_of_3
+B. subtilis,4237,2589,61.1,473,954,221,0,0,0
+E. coli,4318,3313,76.73,480,425,94,2,3,1
+M. tuberculosis,3906,2196,56.22,197,1500,13,0,0,0
+P. aeruginosa,5572,4654,83.52,310,604,3,0,1,0
+T. thermophilus,1957,1289,65.87,124,516,0,6,2,20

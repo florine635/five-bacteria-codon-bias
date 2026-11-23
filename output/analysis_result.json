@@ -1,0 +1,164 @@
+{
+  "corr_gc3s_enc_all": {
+    "r": -0.8554,
+    "n": 14041
+  },
+  "corr_per_species": {
+    "B. subtilis": {
+      "r": 0.318,
+      "n": 2589,
+      "gc3s_mean": 0.4199,
+      "enc_mean": 52.54
+    },
+    "E. coli": {
+      "r": -0.4438,
+      "n": 3313,
+      "gc3s_mean": 0.536,
+      "enc_mean": 47.16
+    },
+    "M. tuberculosis": {
+      "r": -0.8115,
+      "n": 2196,
+      "gc3s_mean": 0.7869,
+      "enc_mean": 42.35
+    },
+    "P. aeruginosa": {
+      "r": -0.8109,
+      "n": 4654,
+      "gc3s_mean": 0.8715,
+      "enc_mean": 32.91
+    },
+    "T. thermophilus": {
+      "r": -0.8102,
+      "n": 1289,
+      "gc3s_mean": 0.9216,
+      "enc_mean": 31.63
+    }
+  },
+  "corr_species_level": {
+    "r": -0.9633,
+    "n": 5
+  },
+  "pca": {
+    "explained_pct": [
+      39.89,
+      8.41,
+      4.15,
+      3.6,
+      2.53
+    ],
+    "n_features": 59,
+    "pc1_top_positive": [
+      [
+        "ATC",
+        0.176
+      ],
+      [
+        "GCC",
+        0.173
+      ],
+      [
+        "GAC",
+        0.173
+      ],
+      [
+        "TTC",
+        0.17
+      ],
+      [
+        "ACC",
+        0.17
+      ]
+    ],
+    "pc1_top_negative": [
+      [
+        "GAT",
+        -0.174
+      ],
+      [
+        "TTT",
+        -0.172
+      ],
+      [
+        "ATT",
+        -0.171
+      ],
+      [
+        "AAA",
+        -0.17
+      ],
+      [
+        "TTA",
+        -0.166
+      ]
+    ]
+  },
+  "kmeans": {
+    "engine": "numpy-fallback (ModuleNotFoundError)",
+    "k": 5,
+    "purity": 0.9143,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 2591,
+        "majority_species": "M. tuberculosis",
+        "majority_pct": 79.93,
+        "composition": {
+          "B. subtilis": 3,
+          "E. coli": 23,
+          "M. tuberculosis": 2071,
+          "P. aeruginosa": 477,
+          "T. thermophilus": 17
+        }
+      },
+      {
+        "cluster": 1,
+        "size": 3038,
+        "majority_species": "B. subtilis",
+        "majority_pct": 83.74,
+        "composition": {
+          "B. subtilis": 2544,
+          "E. coli": 442,
+          "M. tuberculosis": 18,
+          "P. aeruginosa": 30,
+          "T. thermophilus": 4
+        }
+      },
+      {
+        "cluster": 2,
+        "size": 2923,
+        "majority_species": "E. coli",
+        "majority_pct": 97.13,
+        "composition": {
+          "B. subtilis": 42,
+          "E. coli": 2839,
+          "M. tuberculosis": 13,
+          "P. aeruginosa": 29
+        }
+      },
+      {
+        "cluster": 3,
+        "size": 4220,
+        "majority_species": "P. aeruginosa",
+        "majority_pct": 97.56,
+        "composition": {
+          "E. coli": 9,
+          "M. tuberculosis": 92,
+          "P. aeruginosa": 4117,
+          "T. thermophilus": 2
+        }
+      },
+      {
+        "cluster": 4,
+        "size": 1269,
+        "majority_species": "T. thermophilus",
+        "majority_pct": 99.76,
+        "composition": {
+          "M. tuberculosis": 2,
+          "P. aeruginosa": 1,
+          "T. thermophilus": 1266
+        }
+      }
+    ]
+  }
+}

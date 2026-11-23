@@ -2,7 +2,7 @@
 
 《用 Python 玩转数据》实践项目 —— 5 种细菌全基因组 CDS 的密码子偏好量化、可视化与聚类
 
-***
+---
 
 ## 这个项目在做什么
 
@@ -10,15 +10,15 @@
 
 四个步骤对应课程的四块内容：
 
-| 步骤 | 脚本                      | 做什么                         | 对应课件                   |
-| -- | ----------------------- | --------------------------- | ---------------------- |
-| 1  | `01_fetch_data.py`      | 从 NCBI Entrez 取全基因组 CDS 并缓存 | 第 5 周 数据获取与预处理         |
-| 2  | `02_compute_metrics.py` | 清洗 CDS，算 RSCU / GC3s / ENC  | 第 3–4 周 数据结构、DataFrame |
-| 3  | `03_analyze.py`         | 相关性分析、PCA 降维、K-means 聚类     | 第 6 周 数据统计挖掘           |
-| 4  | `04_plot.py`            | 出 4 张图（含箱线图）                | 第 4 周 箱形图、第 6 周 可视化    |
-| 5  | `05_gui.py`             | tkinter 图形界面浏览结果            | 第 7 周 面向对象与 GUI        |
+| 步骤 | 脚本 | 做什么 | 对应课件 |
+|---|---|---|---|
+| 1 | `01_fetch_data.py` | 从 NCBI Entrez 取全基因组 CDS 并缓存 | 第 5 周 数据获取与预处理 |
+| 2 | `02_compute_metrics.py` | 清洗 CDS，算 RSCU / GC3s / ENC | 第 3–4 周 数据结构、DataFrame |
+| 3 | `03_analyze.py` | 相关性分析、PCA 降维、K-means 聚类 | 第 6 周 数据统计挖掘 |
+| 4 | `04_plot.py` | 出 4 张图（含箱线图） | 第 4 周 箱形图、第 6 周 可视化 |
+| 5 | `05_gui.py` | tkinter 图形界面浏览结果 | 第 7 周 面向对象与 GUI |
 
-***
+---
 
 ## 目录结构
 
@@ -37,18 +37,18 @@
 └── README.md
 ```
 
-***
+---
 
 ## 环境准备
 
-| 依赖                          | 谁需要          | 说明                           |
-| --------------------------- | ------------ | ---------------------------- |
-| pandas / numpy / matplotlib | 全部           | 数据分析与绘图的基础库                  |
-| tkinter                     | 05（GUI）      | Python 自带，不用装                |
-| scikit-learn                | 03（可选）       | 只用于 K-means；没装会自动退回 numpy 实现 |
-| **biopython**               | **只有 01 需要** | 联网取数用 `Bio.Entrez`           |
+| 依赖 | 谁需要 | 说明 |
+|---|---|---|
+| pandas / numpy / matplotlib | 全部 | 数据分析与绘图的基础库 |
+| tkinter | 05（GUI） | Python 自带，不用装 |
+| scikit-learn | 03（可选） | 只用于 K-means；没装会自动退回 numpy 实现 |
+| **biopython** | **只有 01 需要** | 联网取数用 `Bio.Entrez` |
 
-也就是说：**数据已经缓存在 `data/` 的前提下，02\~05 不需要 biopython 也能跑**
+也就是说：**数据已经缓存在 `data/` 的前提下，02~05 不需要 biopython 也能跑**
 （`utils.py` 内置了遗传密码表，并与 Biopython 对拍保证一致）。
 
 ```bash
@@ -63,7 +63,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple biopython scikit-learn
 >
 > 想确认密码表没被改坏，可以跑 `python utils.py`，它会打印"内置表与 Biopython 对拍结果"。
 
-***
+---
 
 ## 运行顺序
 
@@ -81,29 +81,29 @@ python 05_gui.py                   # ⑥ 打开图形界面
 
 **关于重跑**：②③④ 是纯计算，可以随便重跑，结果一样（K-means 固定了 `random_state=42`）。
 
-***
+---
 
 ## 输出的文件
 
-| 文件                                 | 内容                                    |
-| ---------------------------------- | ------------------------------------- |
+| 文件 | 内容 |
+|---|---|
 | `output/codon_metrics_per_CDS.csv` | 每条 CDS 一行：物种、基因、长度、GC3s、ENC、59 个 RSCU |
-| `output/species_summary.csv`       | 每个物种一行：CDS 数、平均 GC3s、ENC 均值/极值/标准差    |
-| `output/rscu_matrix.csv`           | 物种 × 密码子的 RSCU 均值（画热图用）               |
-| `output/filter_log.csv`            | 过滤统计：每种原因剔除了多少条（**报告方法节必须引用**）        |
-| `output/pca_coordinates.csv`       | 每条 CDS 的 PC1/PC2 坐标 + 所属聚类            |
-| `output/analysis_result.json`      | 相关系数、PCA 解释方差、聚类纯度等                   |
-| `figures/fig1_ENC_plot.png`        | GC3s–ENC 散点 + 无选择期望曲线（核心图）            |
-| `figures/fig2_RSCU_heatmap.png`    | RSCU 热图（按氨基酸分组）                       |
-| `figures/fig3_PCA.png`             | PCA 散点（按物种着色）                         |
-| `figures/fig4_GC3s_box.png`        | GC3s 箱线图                              |
+| `output/species_summary.csv` | 每个物种一行：CDS 数、平均 GC3s、ENC 均值/极值/标准差 |
+| `output/rscu_matrix.csv` | 物种 × 密码子的 RSCU 均值（画热图用） |
+| `output/filter_log.csv` | 过滤统计：每种原因剔除了多少条（**报告方法节必须引用**） |
+| `output/pca_coordinates.csv` | 每条 CDS 的 PC1/PC2 坐标 + 所属聚类 |
+| `output/analysis_result.json` | 相关系数、PCA 解释方差、聚类纯度等 |
+| `figures/fig1_ENC_plot.png` | GC3s–ENC 散点 + 无选择期望曲线（核心图） |
+| `figures/fig2_RSCU_heatmap.png` | RSCU 热图（按氨基酸分组） |
+| `figures/fig3_PCA.png` | PCA 散点（按物种着色） |
+| `figures/fig4_GC3s_box.png` | GC3s 箱线图 |
 
-***
+---
 
 ## 常见问题
 
 **Q1. 报 `Failed to understand id: GCF_...`**
-NCBI 的 nuccore 库不认 GCF\_ 组装号，必须用染色体自身的 `NC_` 登录号。本项目 `config.py` 里用的都是 NC\_ 号，如果你自己加物种，记得换。
+NCBI 的 nuccore 库不认 GCF_ 组装号，必须用染色体自身的 `NC_` 登录号。本项目 `config.py` 里用的都是 NC_ 号，如果你自己加物种，记得换。
 
 **Q2. 报连接被重置 / 超时**
 NCBI 偶发限流。脚本已内置重试（`config.NCBI_RETRY`）。连续失败就过几分钟再跑，或把 `config.NCBI_SLEEP` 调大一点。
@@ -115,7 +115,7 @@ NCBI 偶发限流。脚本已内置重试（`config.NCBI_RETRY`）。连续失�
 能。`03_analyze.py` 会自动退回自带的 numpy 版 K-means，只是会慢一点。PCA 本来就是手写 SVD，不依赖 sklearn。
 
 **Q5. 想换物种**
-改 `config.py` 的 `SPECIES` 字典（加 `NC_` 登录号 + 遗传密码表编号），再跑一次 `01_fetch_data.py --verify` 核对，然后按顺序重跑 ①\~④。
+改 `config.py` 的 `SPECIES` 字典（加 `NC_` 登录号 + 遗传密码表编号），再跑一次 `01_fetch_data.py --verify` 核对，然后按顺序重跑 ①~④。
 
 > ⚠️ 遗传密码表别乱填：细菌一般用 `11`，但支原体要用 `4`，线粒体用 `2`。
 > 填错了所有指标都会算错，而且不会报错。
@@ -126,7 +126,7 @@ NCBI 偶发限流。脚本已内置重试（`config.NCBI_RETRY`）。连续失�
 **Q7. 看到 `can't open file for write !`**
 这是 matplotlib 写字体缓存（`~/.matplotlib`）时的提示，不影响出图。若图确实没生成，检查 `figures/` 目录是否存在或是否只读。
 
-***
+---
 
 ## 复现说明
 
